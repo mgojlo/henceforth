@@ -1,0 +1,25 @@
+: cat [ [ i ] dip i ] cons cons ;
+: unit [ dup zap ] cons ; 
+
+: true swap zap ;
+: false zap ;
+
+: t [ true ] ;
+: f [ false ] ;
+
+: take [ dip ] cons cons ;
+: flip3 [] take take take i ;
+
+: or [ dup ] i i ; 
+
+: and dup flip3 swap i ;
+
+: toLam [ [] cons ] cons ;
+
+: pair cat ;
+
+: unpair i ;
+
+: square dup * ;
+
+: dist^2 square swap square ;
